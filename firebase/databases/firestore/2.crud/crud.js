@@ -1,5 +1,5 @@
 import { firestoreDB } from "../../../setup/setup.js";
-import { collection, doc, addDoc, setDoc, getDocs, getDoc, query, where, limit, orderBy } from "firebase/firestore";
+import { collection, doc, addDoc, setDoc, getDocs, getDoc, query, where, limit, orderBy, updateDoc } from "firebase/firestore";
 
 // CREATE
 // addDOC
@@ -103,4 +103,32 @@ let q3 = query(
     collection(firestoreDB, "cars"),
     orderBy("price", "desc")
 )
-getCarsq(q3)
+// getCarsq(q3)
+
+// UPDATE with updateDoc
+async function updateCars() {
+    try{
+        const car = await getDoc(doc(firestoreDB, collectionName, "TataCars"));
+        if (car.exists()){
+            console.log("before update: ")
+            console.log(car.data())
+            await updateDoc(car.ref, {
+                color: "red"
+            })
+        }else{
+            throw new Error ("doc not found")
+        }
+        
+        const res = await getDoc(doc(firestoreDB, collectionName, "TataCars"));
+        if (res.exists()){
+            console.log("after update: ")
+            console.log(res.data())
+        }
+    }catch(error){
+        console.log(error)
+    }
+}
+
+updateCars();
+
+// DELETE with deleteDoc
