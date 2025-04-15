@@ -1,9 +1,11 @@
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from "firebase/firestore";
+import { getDatabase } from 'firebase/database';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAKWCSCW1eIC81HKopqLtTrZcjwzhBKn7w",
   authDomain: "fir-5981c.firebaseapp.com",
+  databaseURL: "https://fir-5981c-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "fir-5981c",
   storageBucket: "fir-5981c.firebasestorage.app",
   messagingSenderId: "158025329174",
@@ -13,5 +15,5 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 const firestoreDB = getFirestore(app);
-
-export { firestoreDB };
+const realtimeDB = getDatabase(app)
+export { firestoreDB, realtimeDB };
