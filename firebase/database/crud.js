@@ -1,4 +1,4 @@
-import { realtimeDB } from "../../setup/setup.js";
+import { realtimeDB } from "../setup/setup.js";
 import { ref, set, get, onValue, update, remove } from "firebase/database";
 
 //CREATE

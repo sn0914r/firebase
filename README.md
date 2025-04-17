@@ -1,7 +1,7 @@
 # Roadmap
 1. firebase App & setUp
-2. databases: firestore, realtime database
-3. firebase authentication (to handle login/signup)
-4. security rules (to lock DB)
-5. onDisconnect()
+2. firestore
+3. realtime database & onDisconnect()
+4. firebase authentication (to handle login/signup)
+5. security rules (to lock DB)
 6. Deployment
