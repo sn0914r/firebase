@@ -89,11 +89,11 @@ unsubscribe();
 ```
 
 ### Signout
-1. To sign out a user in Firebase Authentication, you use the `signOut()` function
-2. It takes the `getAuth()` instance as argumnet.
-3. when `signOut()` is called its logout the user (if logged in) & returns a promise:
-    1. on `resolve`- it returns void when `signout` is successfull
-    2. on `rejection`- it returns the `error object`
+1. To sign out a user in Firebase Authentication, use the `signOut()` function.
+2. It takes the `instance` returned by `getAuth()` as argument.
+3. When `signOut()` is called, it logs out the user (if logged in) and returns a promise:
+    1. On `resolve`: returns `void`.
+    2. on `rejection`- it returns the `error` object
 ```JS
 const result = await signOut(authentication);
 console.log(result); // undefined if succesfull
@@ -134,7 +134,7 @@ async function signUp(email, password){
     2. `email ID`
     3. `password`
 3. `signInWithEmailAndPassword(authentication, email, password)` returns a promise:
-    1. 1. on `resolve`-  returns `userCredential` object that contains user's data (`userCredential.user`)
+    1. on `resolve`-  returns `userCredential` object that contains user's data (`userCredential.user`)
     2. on `rejection`- throws the `error object`.
 ```JS
 async function signIn(email, password){
@@ -149,11 +149,11 @@ async function signIn(email, password){
 ```
 
 ### signout / logout
-1. To sign out a user in Firebase Authentication, you use the `signOut()` function
-2. It takes the `getAuth()` instance as argumnet.
-3. when `signOut()` is called its logout the user (if logged in) & returns a promise:
-    1. on `resolve`- it returns void when `signout` is successfull
-    2. on `rejection`- it returns the `error object`
+1. To sign out a user in Firebase Authentication, use the `signOut()` function.
+2. It takes the `instance` returned by `getAuth()` as argument.
+3. When `signOut()` is called, it logs out the user (if logged in) and returns a promise:
+    1. On `resolve`: returns `void`.
+    2. on `rejection`- it returns the `error` object
 ```JS
 const result = await signOut(authentication);
 console.log(result); // undefined if succesfull

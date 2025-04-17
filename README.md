@@ -1,8 +1,7 @@
 # Roadmap
 1. firebase App & setUp
-2. Cloud Firestore (Database)
-3. Firebase Authentication
-4. Firebase Storage (file uploads)
-5. Firebase Cloud Functions (basic idea)
-6. Firebase Hosting
-
+2. databases: firestore, realtime database
+3. firebase authentication (to handle login/signup)
+4. security rules (to lock DB)
+5. onDisconnect()
+6. Deployment
