@@ -109,3 +109,9 @@ await update(ref(realtimeDB, "users/sivananda/address"), {
 ```JS
 await remove(ref(realtimeDB, "users/venu"))
 ```
+
+### Note
+We must import `ref`, `set`, `get`, `onValue`, `update`, `remove` from `firebase/database`.
+```JS
+import { ref, set, get, onValue, update, remove } from "firebase/database";
+```
